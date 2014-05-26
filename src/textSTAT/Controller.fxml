@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="textSTAT.Controller">
+<children><MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+  <menus>
+    <Menu mnemonicParsing="false" text="File">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#openTextFile" text="openTextFIle" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Edit">
+      <items>
+        <MenuItem mnemonicParsing="false" text="Delete" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Help">
+      <items>
+        <MenuItem mnemonicParsing="false" text="About" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar><ToolBar layoutY="27.0" prefHeight="25.0" prefWidth="600.0">
+  <items>
+    <Button mnemonicParsing="false" onAction="#openTextFile" text="opentext" /><Button mnemonicParsing="false" text="Button" /><Button mnemonicParsing="false" text="Button" />
+  </items>
+</ToolBar><TabPane layoutY="60.0" prefHeight="360.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+<content><AnchorPane prefHeight="200.0" prefWidth="200.0">
+<children><ListView fx:id="corpusList" layoutX="6.0" prefHeight="325.0" prefWidth="630.0" style="-fx-border-color: BLACK;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+</children></AnchorPane>
+</content></Tab>
+    <Tab text="Untitled Tab 2" />
+  </tabs>
+</TabPane>
+</children></AnchorPane>

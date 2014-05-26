@@ -1,30 +1,33 @@
 package textSTAT;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class textSTAT extends Application{
 
-	 public static void main(String[] args) {
-	        Application.launch(textSTAT.class, (java.lang.String[])null);
-	    }
-
-	    @Override
-	    public void start(Stage primaryStage) {
-	        try {
-	            AnchorPane page = (AnchorPane) FXMLLoader.load(textSTAT.class.getResource("MainGUI.fxml"));
-	            Scene scene = new Scene(page);
-	            primaryStage.setScene(scene);
-	            primaryStage.setTitle("textSTAT");
-	            primaryStage.show();
-	        } catch (Exception ex) {
-	            Logger.getLogger(textSTAT.class.getName()).log(Level.SEVERE, null, ex);
-	        }
-	    }
+	
+	public void start(Stage primaryStage){
+		Parent root;
+		Scene scene;
+		try{
+			root= FXMLLoader.load(getClass().getResource("Controller.fxml"));
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return;
+		}
+		scene = new Scene(root);
+		primaryStage.setScene(scene);
+		primaryStage.sizeToScene();
+		primaryStage.show();
+		primaryStage.setTitle("textSTAT");
+	}
+	
+	public static void main(String[] args){
+		launch(args);
+	}
 }
