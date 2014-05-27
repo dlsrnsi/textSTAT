@@ -1,40 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="textSTAT.Controller">
-<children><MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
-  <menus>
-    <Menu mnemonicParsing="false" text="File">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="textSTAT.Controller">
+  <children>
+    <MenuBar layoutX="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="25.0" prefWidth="600.0" AnchorPane.bottomAnchor="425.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#openTextFile" text="openTextFIle" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <ToolBar layoutX="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="28.0" prefWidth="600.0" AnchorPane.bottomAnchor="397.0">
       <items>
-        <MenuItem mnemonicParsing="false" onAction="#openTextFile" text="openTextFIle" />
+        <Button mnemonicParsing="false" onAction="#openTextFile" text="opentext" />
+        <Button mnemonicParsing="false" text="Button" />
+        <Button mnemonicParsing="false" text="Button" />
       </items>
-    </Menu>
-    <Menu mnemonicParsing="false" text="Edit">
-      <items>
-        <MenuItem mnemonicParsing="false" text="Delete" />
-      </items>
-    </Menu>
-    <Menu mnemonicParsing="false" text="Help">
-      <items>
-        <MenuItem mnemonicParsing="false" text="About" />
-      </items>
-    </Menu>
-  </menus>
-</MenuBar><ToolBar layoutY="27.0" prefHeight="25.0" prefWidth="600.0">
-  <items>
-    <Button mnemonicParsing="false" onAction="#openTextFile" text="opentext" /><Button mnemonicParsing="false" text="Button" /><Button mnemonicParsing="false" text="Button" />
-  </items>
-</ToolBar><TabPane layoutY="60.0" prefHeight="360.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
-  <tabs>
-    <Tab text="Untitled Tab 1">
-<content><AnchorPane prefHeight="200.0" prefWidth="200.0">
-<children><ListView fx:id="corpusList" layoutX="6.0" prefHeight="325.0" prefWidth="630.0" style="-fx-border-color: BLACK;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-</children></AnchorPane>
-</content></Tab>
-    <Tab text="Untitled Tab 2" />
-  </tabs>
-</TabPane>
-</children></AnchorPane>
+    </ToolBar>
+    <TabPane layoutX="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="364.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="25.0" tabMaxWidth="100.0" tabMinHeight="25.0" tabMinWidth="100.0" AnchorPane.topAnchor="55.0">
+      <tabs>
+        <Tab text="Corpus">
+          <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+              <children>
+                <ListView fx:id="corpusListView" pickOnBounds="true" prefHeight="325.0" prefWidth="630.0" style="-fx-border-color: BLACK;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Concordance">
+          <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+              <children>
+                <TableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="15.0">
+                  <columns>
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                  </columns>
+                </TableView>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Frequency">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="dfdfd">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <PieChart id="PieChart" prefHeight="285.0" prefWidth="313.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="15.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

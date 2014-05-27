@@ -1,32 +1,15 @@
 package corpus;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 
-public class Corpus {
-	File corpus;
-	final String regex="(\\.|!|\\?)+\"?(?=\\s))";
-	final String regex2="<.*>.*</.*>";
-	final String regex3="\\s*";
+public interface Corpus {
+	final String regex="(\\.|!|\\?)+\"?\\s+";//which split whole text as sentence
+	final String regex2="<.*>.*</.*>";// which remove XML 
+	final String regex3="\\s*"; //which remove empty sentence 
 	LinkedList<Sentence> sentencestore=new LinkedList<Sentence>();
-	public void makeSentence(File corpus) throws IOException{
-		BufferedWriter out=new BufferedWriter(new FileWriter("String.txt"));
-		BufferedReader bin=new BufferedReader(new FileReader(corpus));
-		String Line;
-		int sNum=0;
-		while((Line=bin.readLine())!=null){
-			Line.replaceAll(System.getProperty("line.seperator")," ");		
-			System.out.println(Line);
-			out.write(Line);
-		}
-		out.close();
-		
-	}
+	public void makeCorpus(File corpus) throws IOException;
+	public void makeSentence(File corpus) throws IOException;
 	
 
 }
