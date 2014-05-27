@@ -1,14 +1,14 @@
 package corpus;
 
 import java.io.File;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CorpusProject {
 	private static CorpusProject corpusProject;
-	Set<File> corpusSet;
+	private List<File> corpusList;
 	private CorpusProject(){
-		corpusSet=new HashSet<File>();
+		corpusList=new LinkedList<File>();
 	}
 	public static CorpusProject getCorpusProject(){
 		if(corpusProject==null){
@@ -18,7 +18,11 @@ public class CorpusProject {
 		return corpusProject;
 	}
 	public void addCorpus(File corpus){
-		corpusSet.add(corpus);
+		corpusList.add(corpus);
 	}
+	public List<File> getCorpusList(){
+		return corpusList;
+	}
+
 
 }

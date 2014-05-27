@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TextCorpus implements Corpus{
 	private File corpus;
-	List<Sentence> sentenceList;
+	private List<Sentence> sentenceList;
 	public TextCorpus(String dir){
 		setCorpus(new File(dir));
 		sentenceList=new LinkedList<Sentence>();
@@ -55,5 +55,8 @@ public class TextCorpus implements Corpus{
 	}
 	public void setCorpus(File corpus) {
 		this.corpus = corpus;
+	}
+	public List<Sentence> getSentenceList(){
+		return sentenceList;
 	}
 }

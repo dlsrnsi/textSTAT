@@ -4,9 +4,9 @@ import java.util.StringTokenizer;
 
 public class Sentence {
 	String name=" ";
-	String sentence;
-	String[] word;
-	int sNum;
+	public String sentence;
+	public String[] word;
+	public int sNum;
 	public Sentence(String sentence, int sNum){
 		this.sentence=sentence;
 		this.sNum=sNum;
