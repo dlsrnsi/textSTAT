@@ -23,6 +23,9 @@ public class CorpusProject {
 	public List<File> getCorpusList(){
 		return corpusList;
 	}
+	public void clearCorpus(){
+		corpusList=null;
+	}
 
 
 }
