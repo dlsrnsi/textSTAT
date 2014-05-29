@@ -23,7 +23,6 @@ public class TextCorpus implements Corpus{
 		String Line;
 		int sNum=0;
 		while((Line=bin.readLine())!=null){//which remove new line command		
-			System.out.println(Line);
 			out.write(Line);
 			out.write(" ");
 		}
@@ -44,7 +43,6 @@ public class TextCorpus implements Corpus{
 				out.newLine();
 				Sentence sentence=new Sentence(sentenced[i],sNum);
 				sNum++;
-				System.out.println(sentenced[i]);
 				sentenceList.add(sentence);
 			}
 		}
